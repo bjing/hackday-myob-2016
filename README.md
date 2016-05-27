@@ -1,7 +1,7 @@
 
 # Setup
 ## Python
-Run the command in a terminal.
+Run the following commands in a terminal.
 
 If you don't already have pip, install it
 ```
@@ -19,6 +19,11 @@ sudo pip install requests
 ## Confluence
 #### Auth token
 Under app/, create file "auth_token" containing your Confluence auth_token
+#### How to get your Confluence auth token
+![In postman, create a new request, Under Authentication tab, select "Basic Auth" and type username and password, then click on "Update Request" on the right]
+(https://github.com/bjing/hackday-myob-2016/blob/master/misc/screenshots/basic_auth.png)
+![Now head to "Headers" tab and you can see your auth token under the key "Authorization"]
+(https://github.com/bjing/hackday-myob-2016/blob/master/misc/screenshots/auth_token.png)
 #### Confluence API url
 In app/confluence.cfg, fill in your confluence api url
 ## OCR API access key
