@@ -52,8 +52,10 @@ def ocr(image, file_type):
 
     response = requests.post(ocr_api_url, data = payload, files=files)
     if response.status_code == 200:
+        print "Request successful! Processing result..."
         text = extract_text(response.text)
         dump_text_to_file(format_text(text))
+        print "Text successfully extracted from image"
     else:
         print "OCR request failed. Error code %s" % response.status_code
 

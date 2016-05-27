@@ -10,7 +10,12 @@ def extract_text_from_image(image, type):
 
 def create_confluence_page():
     api = ConfluenceAPI()
-    page_content = file('ocr_result.txt', 'rb').read()
+    try:
+        page_content = file('ocr_result.txt', 'rb').read()
+    except Exception as e:
+        print 'Cannot load OCR result'
+        print e
+        exit(1)
     api.create_page(page_content)
 
 # Extract text from response and load it into Confluence
