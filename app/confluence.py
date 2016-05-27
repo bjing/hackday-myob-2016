@@ -42,7 +42,7 @@ class ConfluenceAPI:
             }
         }
 
-        headers = {"Authorization": "Basic %s" % self.auth_token,
+        headers = {"Authorization": "%s" % self.auth_token,
                   "Content-Type": "application/json"}
 
         response = requests.post(self.base_url, headers=headers, data=json.dumps(payload))
