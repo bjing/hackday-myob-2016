@@ -13,7 +13,6 @@ def load_api_key():
 def extract_text(response_text):
     """ Extract text from the response returned from Free OCR API
     """
-    print response_text
     ocr_result = json.loads(response_text.encode('ascii', 'ignore'))
     return ocr_result['ParsedResults'][0]['ParsedText']
 
@@ -49,7 +48,7 @@ def ocr(image, file_type):
         files={image: open(image, 'rb')}
 
     ocr_api_url = 'https://api.ocr.space/parse/image'
-    print 'Making request to %s' % ocr_api_url
+    print 'Making request to %s...' % ocr_api_url
 
     response = requests.post(ocr_api_url, data = payload, files=files)
     if response.status_code == 200:

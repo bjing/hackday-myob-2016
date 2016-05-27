@@ -20,16 +20,14 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Extract text from Image and load it into Confluence')
     parser.add_argument('--image-file', dest='image_file', action='store',
                         help='Specify the image location')
-    # parser.add_argument('--image-url', dest='image_url', action='store',
-    #                     help='Specify the image url')
+    parser.add_argument('--image-url', dest='image_url', action='store',
+                        help='Specify the image url')
 
     args = parser.parse_args()
-
-    print args.image_file
 
     if args.image_file is not None:
         extract_text_from_image(args.image_file, 'file')
     else:
-        extract_text_from_image(image_url, 'url')
+        extract_text_from_image(args.image_url, 'url')
 
     create_confluence_page()

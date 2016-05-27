@@ -33,7 +33,7 @@ Under app/, create file "api_key" containing the api key for accessing Free OCR 
 The entry point of the app is app.py
 ```
 $ ./app.py --help
-usage: app.py [-h] [--image-file IMAGE_FILE]
+usage: app.py [-h] [--image-file IMAGE_FILE] [--image-url IMAGE_URL]
 
 Extract text from Image and load it into Confluence
 
@@ -41,8 +41,14 @@ optional arguments:
   -h, --help            show this help message and exit
   --image-file IMAGE_FILE
                         Specify the image location
+  --image-url IMAGE_URL
+                        Specify the image url
 ```
-For example, you can run it like this:
+For example, you can run it like this if you have the image on your computer:
 ```
 ./app.py --image-file "/Users/brianjing/Pictures/ocr-a-font-sample.png"
+```
+Or like this if you have an image from the web:
+```
+./app.py --image-url http://www.prepressure.com/images/fonts_sample_ocra_medium.png
 ```
