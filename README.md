@@ -33,7 +33,12 @@ In postman,
 ![auth token](https://github.com/bjing/hackday-myob-2016/blob/master/misc/screenshots/auth_token.png)
 
 #### Confluence API url
-In app/confluence.cfg, fill in your confluence api url
+In app/confluence.cfg, fill in your confluence api url. 
+
+For me, it's 
+```
+https://brianjing.atlassian.net/wiki/rest/api/content/
+```
 ## OCR API access key
 Under app/, create file "api_key" containing the api key for accessing Free OCR Online API
 
