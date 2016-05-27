@@ -18,16 +18,30 @@ sudo pip install requests
 ```
 ## Confluence
 #### Auth token
-Under app/, create file "auth_token" containing your Confluence auth_token
+Create file ```app/auth_token``` containing your Confluence auth_token
 #### How to get your Confluence auth token
-![In postman, create a new request, Under Authentication tab, select "Basic Auth" and type username and password, then click on "Update Request" on the right]
+In Postman, 
+
+1. create a new request, 
+2. Under Authentication tab, select "Basic Auth" and type in your username and password,
+3. Click on "Update Request" on the right to apply the change
+4. Now head over to "Headers" tab and you can see your auth token under the key "Authorization"
+5. Copy the whole token string into file ```app/auth_token```. Create it if it doesn't already exist.
+
+![basic auth]
 (https://github.com/bjing/hackday-myob-2016/blob/master/misc/screenshots/basic_auth.png)
-![Now head to "Headers" tab and you can see your auth token under the key "Authorization"]
-(https://github.com/bjing/hackday-myob-2016/blob/master/misc/screenshots/auth_token.png)
+
+![auth token](https://github.com/bjing/hackday-myob-2016/blob/master/misc/screenshots/auth_token.png)
+
 #### Confluence API url
-In app/confluence.cfg, fill in your confluence api url
+In file ```app/confluence.cfg```, fill in your confluence api url. 
+
+For me, it's 
+```
+https://brianjing.atlassian.net/wiki/rest/api/content/
+```
 ## OCR API access key
-Under app/, create file "api_key" containing the api key for accessing Free OCR Online API
+Copy and past the api key for accessing Free OCR Online API into file app/api_key.
 
 # Run it
 The entry point of the app is app.py
