@@ -1,5 +1,5 @@
 import requests
-import simplejson as json
+import json
 
 def load_api_key():
     try:

@@ -17,11 +17,11 @@ def create_confluence_page():
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Process some integers.')
+    parser = argparse.ArgumentParser(description='Extract text from Image and load it into Confluence')
     parser.add_argument('--image-file', dest='image_file', action='store',
                         help='Specify the image location')
-    parser.add_argument('--image-url', dest='image_url', action='store',
-                        help='Specify the image url')
+    # parser.add_argument('--image-url', dest='image_url', action='store',
+    #                     help='Specify the image url')
 
     args = parser.parse_args()
 
