@@ -18,7 +18,7 @@ sudo pip install requests
 ```
 ## Confluence
 #### Auth token
-Create file ```app/auth_token`` containing your Confluence auth_token
+Create file ```app/auth_token``` containing your Confluence auth_token
 #### How to get your Confluence auth token
 In Postman, 
 
@@ -34,7 +34,7 @@ In Postman,
 ![auth token](https://github.com/bjing/hackday-myob-2016/blob/master/misc/screenshots/auth_token.png)
 
 #### Confluence API url
-In ```app/confluence.cfg```, fill in your confluence api url. 
+In file ```app/confluence.cfg```, fill in your confluence api url. 
 
 For me, it's 
 ```
